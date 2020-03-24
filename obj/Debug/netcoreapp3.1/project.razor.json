@@ -20521,6 +20521,11 @@
   "RootNamespace": "CSharpEF",
   "Documents": [
     {
+      "FilePath": "c:\\Projects\\CSharp\\CSharpEF\\Views\\Funcionario\\Index.cshtml",
+      "TargetPath": "Views\\Funcionario\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Projects\\CSharp\\CSharpEF\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

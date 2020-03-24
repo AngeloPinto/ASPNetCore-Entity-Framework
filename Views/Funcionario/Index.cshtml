@@ -1,0 +1,14 @@
+@model IEnumerable<CSharpEF.Models.Funcionario>
+
+<h2>Todos os Funcionários</h2>
+
+<a href="/Funcionario/Cadastrar" class="btn btn-primary">Novo Funcionário</a>
+<hr>
+@foreach (var funcionario in Model)
+{
+    <p>CPF: @funcionario.Cpf</p>
+    <p>Nome: @funcionario.Nome</p>
+    <p>Salário: @funcionario.Salario</p>
+    <a href="/Funcionario/Editar/@funcionario.Id" class="btn btn-info">Editar</a>
+    <hr>
+}

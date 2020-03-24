@@ -1,6 +1,8 @@
 using System;
-using CSharpEF.Models;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+
+using CSharpEF.Models;
 using CSharpEF.Database;
 
 namespace CSharpEF.Database
@@ -13,6 +15,13 @@ namespace CSharpEF.Database
         {
             this.database = database;
         }
+
+        public IActionResult Index()
+        {
+            var funcionarios = database.Funcionarios.ToList();
+            return View(funcionarios);
+        }
+
         public IActionResult Cadastrar() 
         {
             return View();
@@ -23,7 +32,7 @@ namespace CSharpEF.Database
         {
             database.Funcionarios.Add(funcionario);
             database.SaveChanges();
-            return Content("Funcionário Salvo com Sucesso!!!");
+            return RedirectToAction("Index");
         }
     }
 
