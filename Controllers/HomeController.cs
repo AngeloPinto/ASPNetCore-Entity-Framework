@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CSharpEF.Models;
 using CSharpEF.Database;
+using Microsoft.EntityFrameworkCore;
 
 namespace CSharpEF.Controllers
 {
@@ -65,6 +66,22 @@ namespace CSharpEF.Controllers
             foreach (var categoria in lstCategoria)
             {
                 Console.WriteLine(categoria.ToString());
+            }
+
+            Console.WriteLine("==============================================");
+
+            return Content("Dados salvos");
+        }
+
+        public IActionResult Produtos()
+        {
+            Console.WriteLine("==============================================");
+
+            var lstProduto = database.Produtos.Include(p => p.Categoria).ToList();
+
+            foreach (var produto in lstProduto)
+            {
+                Console.WriteLine(produto.ToString());
             }
 
             Console.WriteLine("==============================================");
