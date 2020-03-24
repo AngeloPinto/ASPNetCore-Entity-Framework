@@ -34,6 +34,7 @@ namespace CSharpEF.Controllers
 
         public IActionResult Teste()
         {
+            /*
             Categoria c1 = new Categoria();
             Categoria c2 = new Categoria();
             Categoria c3 = new Categoria();
@@ -53,6 +54,20 @@ namespace CSharpEF.Controllers
 
             database.AddRange(lstCategoria);
             database.SaveChanges();
+            */
+
+            // Console.Write("");
+
+            Console.WriteLine("==============================================");
+
+            var lstCategoria = database.Categorias.Where(cat => cat.Nome.Equals("Monitor")).ToList();
+
+            foreach (var categoria in lstCategoria)
+            {
+                Console.WriteLine(categoria.ToString());
+            }
+
+            Console.WriteLine("==============================================");
 
             return Content("Dados salvos");
         }
