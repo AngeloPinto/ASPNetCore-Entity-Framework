@@ -72,6 +72,29 @@ namespace CSharpEF.Controllers
             return Content("Dados salvos");
         }
 
+        public IActionResult Relacionamento() 
+        {
+            Produto p = new Produto();
+            p.Nome = "Doritos";
+            p.Categoria = database.Categorias.Find(1);
+
+            Produto p2 = new Produto();
+            p2.Nome = "Frango";
+            p2.Categoria = database.Categorias.Find(1);
+
+            Produto p3 = new Produto();
+            p3.Nome = "Bolo";
+            p3.Categoria = database.Categorias.Find(2);
+
+            database.Add(p);
+            database.Add(p2);
+            database.Add(p3);
+
+            database.SaveChanges();
+
+            return Content("Relacionamento");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
