@@ -7,7 +7,7 @@ namespace CSharpEF.Database
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) 
         : base(options) 
         {
-            
+
         }
     }
 }
