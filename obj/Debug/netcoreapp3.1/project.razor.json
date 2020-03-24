@@ -20546,6 +20546,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Projects\\CSharp\\CSharpEF\\Views\\Funcionario\\Cadastrar.cshtml",
+      "TargetPath": "Views\\Funcionario\\Cadastrar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Projects\\CSharp\\CSharpEF\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
