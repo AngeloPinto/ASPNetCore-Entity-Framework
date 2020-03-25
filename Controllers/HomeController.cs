@@ -77,7 +77,26 @@ namespace CSharpEF.Controllers
         {
             Console.WriteLine("==============================================");
 
-            var lstProduto = database.Produtos.Include(p => p.Categoria).ToList();
+            // var lstProduto = database.Produtos.Include(p => p.Categoria).ToList();
+
+            // Consulta Lazy Loding - sem include
+            var lstProduto = database.Produtos.ToList();
+
+            foreach (var produto in lstProduto)
+            {
+                Console.WriteLine(produto.ToString());
+            }
+
+            Console.WriteLine("==============================================");
+
+            return Content("Listando Produtos");
+        }
+
+        public IActionResult ProdutosCategoria(int id)
+        {
+            Console.WriteLine("==============================================");
+
+            var lstProduto = database.Produtos.Include(p => p.Categoria).Where(p => p.Categoria.Id == id).ToList();
 
             foreach (var produto in lstProduto)
             {
@@ -87,7 +106,7 @@ namespace CSharpEF.Controllers
             Console.WriteLine("==============================================");
 
             return Content("Dados salvos");
-        }
+        }        
 
         public IActionResult Relacionamento() 
         {

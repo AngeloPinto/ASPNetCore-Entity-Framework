@@ -55,6 +55,7 @@ C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging
 C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Projects\CSharp\CSharpEF\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Cadastrar.cshtml.g.cs
 C:\Projects\CSharp\CSharpEF\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Index.cshtml.g.cs
+C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Projects\CSharp\CSharpEF\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
